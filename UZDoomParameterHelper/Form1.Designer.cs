@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblIWAD = new Label();
-            cmbIWAD = new ComboBox();
+            lblLevel = new Label();
             cmbFile = new ComboBox();
             lblFile = new Label();
             cmbSkill = new ComboBox();
@@ -37,56 +36,56 @@
             checkBox1 = new CheckBox();
             txtParameters = new TextBox();
             btnGenerate = new Button();
+            txtLevel = new TextBox();
             SuspendLayout();
             // 
-            // lblIWAD
+            // lblLevel
             // 
-            lblIWAD.AutoSize = true;
-            lblIWAD.Location = new Point(84, 81);
-            lblIWAD.Name = "lblIWAD";
-            lblIWAD.Size = new Size(40, 15);
-            lblIWAD.TabIndex = 0;
-            lblIWAD.Text = "IWAD:";
-            // 
-            // cmbIWAD
-            // 
-            cmbIWAD.FormattingEnabled = true;
-            cmbIWAD.Location = new Point(130, 78);
-            cmbIWAD.Name = "cmbIWAD";
-            cmbIWAD.Size = new Size(121, 23);
-            cmbIWAD.TabIndex = 1;
+            lblLevel.AutoSize = true;
+            lblLevel.Location = new Point(140, 62);
+            lblLevel.Margin = new Padding(5, 0, 5, 0);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(65, 30);
+            lblLevel.TabIndex = 0;
+            lblLevel.Text = "Level:";
             // 
             // cmbFile
             // 
             cmbFile.FormattingEnabled = true;
-            cmbFile.Location = new Point(130, 134);
+            cmbFile.Items.AddRange(new object[] { "Brutal Doom (brutalv21.pk3)", "Final Doomer (FinalDoomer_v3.4.pk3)", "Doom Comic '96 (Doom Comic '96 V4.1.Pk3)" });
+            cmbFile.Location = new Point(219, 168);
+            cmbFile.Margin = new Padding(5, 6, 5, 6);
             cmbFile.Name = "cmbFile";
-            cmbFile.Size = new Size(121, 23);
+            cmbFile.Size = new Size(205, 38);
             cmbFile.TabIndex = 3;
             // 
             // lblFile
             // 
             lblFile.AutoSize = true;
-            lblFile.Location = new Point(84, 137);
+            lblFile.Location = new Point(140, 174);
+            lblFile.Margin = new Padding(5, 0, 5, 0);
             lblFile.Name = "lblFile";
-            lblFile.Size = new Size(28, 15);
+            lblFile.Size = new Size(49, 30);
             lblFile.TabIndex = 2;
             lblFile.Text = "File:";
             // 
             // cmbSkill
             // 
             cmbSkill.FormattingEnabled = true;
-            cmbSkill.Location = new Point(390, 78);
+            cmbSkill.Items.AddRange(new object[] { "I'm Too Young To Die", "Hey, Not Too Rough", "Hurt Me Plenty", "Ultra-Violence", "Nightmare!" });
+            cmbSkill.Location = new Point(665, 56);
+            cmbSkill.Margin = new Padding(5, 6, 5, 6);
             cmbSkill.Name = "cmbSkill";
-            cmbSkill.Size = new Size(121, 23);
+            cmbSkill.Size = new Size(205, 38);
             cmbSkill.TabIndex = 5;
             // 
             // lblSkill
             // 
             lblSkill.AutoSize = true;
-            lblSkill.Location = new Point(326, 81);
+            lblSkill.Location = new Point(555, 62);
+            lblSkill.Margin = new Padding(5, 0, 5, 0);
             lblSkill.Name = "lblSkill";
-            lblSkill.Size = new Size(58, 15);
+            lblSkill.Size = new Size(101, 30);
             lblSkill.TabIndex = 4;
             lblSkill.Text = "Difficulty:";
             // 
@@ -94,34 +93,45 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.CheckAlign = ContentAlignment.TopRight;
-            checkBox1.Location = new Point(326, 133);
+            checkBox1.Location = new Point(555, 166);
+            checkBox1.Margin = new Padding(5, 6, 5, 6);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(104, 19);
+            checkBox1.Size = new Size(176, 34);
             checkBox1.TabIndex = 6;
             checkBox1.Text = "Fast Monsters?";
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // txtParameters
             // 
-            txtParameters.Location = new Point(88, 193);
+            txtParameters.Location = new Point(147, 286);
+            txtParameters.Margin = new Padding(5, 6, 5, 6);
             txtParameters.Name = "txtParameters";
-            txtParameters.Size = new Size(423, 23);
+            txtParameters.Size = new Size(722, 35);
             txtParameters.TabIndex = 7;
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(247, 259);
+            btnGenerate.Location = new Point(418, 356);
+            btnGenerate.Margin = new Padding(5, 6, 5, 6);
             btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(97, 55);
+            btnGenerate.Size = new Size(166, 110);
             btnGenerate.TabIndex = 8;
             btnGenerate.Text = "Generate";
             btnGenerate.UseVisualStyleBackColor = true;
             // 
+            // txtLevel
+            // 
+            txtLevel.Location = new Point(219, 62);
+            txtLevel.Name = "txtLevel";
+            txtLevel.Size = new Size(107, 35);
+            txtLevel.TabIndex = 9;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(590, 347);
+            ClientSize = new Size(1011, 506);
+            Controls.Add(txtLevel);
             Controls.Add(btnGenerate);
             Controls.Add(txtParameters);
             Controls.Add(checkBox1);
@@ -129,8 +139,8 @@
             Controls.Add(lblSkill);
             Controls.Add(cmbFile);
             Controls.Add(lblFile);
-            Controls.Add(cmbIWAD);
-            Controls.Add(lblIWAD);
+            Controls.Add(lblLevel);
+            Margin = new Padding(5, 6, 5, 6);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -139,8 +149,7 @@
 
         #endregion
 
-        private Label lblIWAD;
-        private ComboBox cmbIWAD;
+        private Label lblLevel;
         private ComboBox cmbFile;
         private Label lblFile;
         private ComboBox cmbSkill;
@@ -148,5 +157,6 @@
         private CheckBox checkBox1;
         private TextBox txtParameters;
         private Button btnGenerate;
+        private TextBox txtLevel;
     }
 }
