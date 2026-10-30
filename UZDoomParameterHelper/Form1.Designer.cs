@@ -33,7 +33,7 @@
             lblFile = new Label();
             cmbSkill = new ComboBox();
             lblSkill = new Label();
-            checkBox1 = new CheckBox();
+            chkFast = new CheckBox();
             txtParameters = new TextBox();
             btnGenerate = new Button();
             txtLevel = new TextBox();
@@ -51,8 +51,9 @@
             // 
             // cmbFile
             // 
+            cmbFile.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbFile.FormattingEnabled = true;
-            cmbFile.Items.AddRange(new object[] { "Brutal Doom (brutalv21.pk3)", "Final Doomer (FinalDoomer_v3.4.pk3)", "Doom Comic '96 (Doom Comic '96 V4.1.Pk3)" });
+            cmbFile.Items.AddRange(new object[] { "", "Brutal Doom (brutalv21.pk3)", "Final Doomer (FinalDoomer_v3.4.pk3)", "Doom Deluxe (DoomDeluxe.pk3)" });
             cmbFile.Location = new Point(219, 168);
             cmbFile.Margin = new Padding(5, 6, 5, 6);
             cmbFile.Name = "cmbFile";
@@ -71,8 +72,9 @@
             // 
             // cmbSkill
             // 
+            cmbSkill.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSkill.FormattingEnabled = true;
-            cmbSkill.Items.AddRange(new object[] { "I'm Too Young To Die", "Hey, Not Too Rough", "Hurt Me Plenty", "Ultra-Violence", "Nightmare!" });
+            cmbSkill.Items.AddRange(new object[] { "", "I'm Too Young To Die", "Hey, Not Too Rough", "Hurt Me Plenty", "Ultra-Violence", "Nightmare!" });
             cmbSkill.Location = new Point(665, 56);
             cmbSkill.Margin = new Padding(5, 6, 5, 6);
             cmbSkill.Name = "cmbSkill";
@@ -89,17 +91,17 @@
             lblSkill.TabIndex = 4;
             lblSkill.Text = "Difficulty:";
             // 
-            // checkBox1
+            // chkFast
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.CheckAlign = ContentAlignment.TopRight;
-            checkBox1.Location = new Point(555, 166);
-            checkBox1.Margin = new Padding(5, 6, 5, 6);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(176, 34);
-            checkBox1.TabIndex = 6;
-            checkBox1.Text = "Fast Monsters?";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkFast.AutoSize = true;
+            chkFast.CheckAlign = ContentAlignment.TopRight;
+            chkFast.Location = new Point(555, 166);
+            chkFast.Margin = new Padding(5, 6, 5, 6);
+            chkFast.Name = "chkFast";
+            chkFast.Size = new Size(176, 34);
+            chkFast.TabIndex = 6;
+            chkFast.Text = "Fast Monsters?";
+            chkFast.UseVisualStyleBackColor = true;
             // 
             // txtParameters
             // 
@@ -118,6 +120,7 @@
             btnGenerate.TabIndex = 8;
             btnGenerate.Text = "Generate";
             btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // txtLevel
             // 
@@ -134,7 +137,7 @@
             Controls.Add(txtLevel);
             Controls.Add(btnGenerate);
             Controls.Add(txtParameters);
-            Controls.Add(checkBox1);
+            Controls.Add(chkFast);
             Controls.Add(cmbSkill);
             Controls.Add(lblSkill);
             Controls.Add(cmbFile);
@@ -154,7 +157,7 @@
         private Label lblFile;
         private ComboBox cmbSkill;
         private Label lblSkill;
-        private CheckBox checkBox1;
+        private CheckBox chkFast;
         private TextBox txtParameters;
         private Button btnGenerate;
         private TextBox txtLevel;
