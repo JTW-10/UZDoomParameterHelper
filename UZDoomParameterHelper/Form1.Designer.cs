@@ -145,7 +145,7 @@
             Controls.Add(lblLevel);
             Margin = new Padding(5, 6, 5, 6);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Parameter Helper";
             ResumeLayout(false);
             PerformLayout();
         }
